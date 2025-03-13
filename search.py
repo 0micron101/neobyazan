@@ -8,7 +8,7 @@ import webbrowser as wb
 #2. Сделать многостранничность
 #3. Открывать пдф на страницах
 
-os.chdir(r"C:\Users\asm\Desktop\То да сё\! НеОбязан")  #папка с проектом
+#os.chdir(r"C:\Users\asm\Desktop\То да сё\! НеОбязан")  #папка с проектом
 
 with open(r"json\alltags.json",'r') as fl:
     alltags=json.load(fl)["tags"]
