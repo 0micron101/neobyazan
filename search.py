@@ -31,4 +31,7 @@ for i in os.listdir("json"):
                     wb.open_new_tab(current["origurl"])
             elif st.button(current["name"]):
                wb.open_new_tab(current["origurl"])
-            
+
+
+if st.button('a'):
+    print('b')
