@@ -1,7 +1,6 @@
 import streamlit as st
 import os
 import json
-import streamlit_pdf_viewer as pdf
 import webbrowser as wb
 
 #Что делать
