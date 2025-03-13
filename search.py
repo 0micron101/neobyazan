@@ -10,7 +10,7 @@ import webbrowser as wb
 
 #os.chdir(r"C:\Users\asm\Desktop\То да сё\! НеОбязан")  #папка с проектом
 
-with open(r"json\alltags.json",'r') as fl:
+with open(r"json/alltags.json",'r') as fl:
     alltags=json.load(fl)["tags"]
 
 
@@ -20,7 +20,7 @@ tagsrch=st.multiselect("Поиск по меткам",alltags,placeholder="Пу�
 
 
 for i in os.listdir("json"):
-   with open(fr"json\{i}","r") as fl:
+   with open(fr"json/{i}","r") as fl:
        current=json.load(fl)
        if (namesrch.lower() in current["name"].lower() or namesrch=='') and (set(tagsrch) <= set(current["tags"]) or tagsrch==[]) and (current["name"]!="alltags"):
            #st.write(current["name"])
