@@ -31,7 +31,7 @@ for i in os.listdir("json"):
 #            elif st.button(current["name"]):
 #               wb.open_new_tab(current["origurl"])
             else:
-                st.write(f'[{current[name]}](%s)'% current[origurl])
+                st.write(f'[{current["name"]}](%s)'% current["origurl"])
                 
 
 
