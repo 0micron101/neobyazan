@@ -32,9 +32,36 @@ for i in os.listdir("json"):
 #               wb.open_new_tab(current["origurl"])
                continue
             else:
-                st.write(f'[{current["name"]}](%s)'% current["origurl"])
+                st.markdown(f'[{current["name"]}](%s)'% current["origurl"])
+
+#стиль для markdown
+st.markdown(
+    """
+    <style>
+    button {
+        background: none!important;
+        border: none;
+        padding: 0!important;
+        color: black !important;
+        text-decoration: none;
+        cursor: pointer;
+        border: none !important;
+    }
+    button:hover {
+        text-decoration: none;
+        color: black !important;
+    }
+    button:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        color: black !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+
                 
 
-
-if st.button('a'):
-    print('b')
