@@ -3,10 +3,8 @@ import os
 import json
 import webbrowser as wb
 
-#Что делать
-#1, Расширять базу данныех
-#2. Сделать многостранничность
-#3. Открывать пдф на страницах
+#Вместо кнопок ссылки
+
 
 #os.chdir(r"C:\Users\asm\Desktop\То да сё\! НеОбязан")  #папка с проектом
 
@@ -27,10 +25,14 @@ for i in os.listdir("json"):
             if current["origurl"]=='':
                st.write(current["name"])
             elif current["origurl"][0:2]=="C:":             #место, где хранятся файлы на компе
-                if st.button(current["name"],help="Этот документ хранится локально, а не на сайте школы",icon="💾"):
-                    wb.open_new_tab(current["origurl"])
-            elif st.button(current["name"]):
-               wb.open_new_tab(current["origurl"])
+                #ФАЙЛЫ С КОМПА И КНОПКИ ОТКЛЮЧЕНЫ
+#                if st.button(current["name"],help="Этот документ хранится локально, а не на сайте школы",icon="💾"):
+#                    wb.open_new_tab(current["origurl"])
+#            elif st.button(current["name"]):
+#               wb.open_new_tab(current["origurl"])
+            else:
+                st.write(f'[{current[name]}](%s)'% current[origurl])
+                
 
 
 if st.button('a'):
