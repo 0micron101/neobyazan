@@ -6,7 +6,7 @@ import webbrowser as wb
 #Вместо кнопок ссылки
 from PIL import Image
 
-image_directory = "1296 logo.png"
+image_directory = "1296 logo2.png"
 image = Image.open(image_directory)
 
 PAGE_CONFIG = {"page_title":"Необязан", 
