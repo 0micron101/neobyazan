@@ -4,7 +4,17 @@ import json
 import webbrowser as wb
 
 #Вместо кнопок ссылки
+from PIL import Image
 
+image_directory = "1296 logo.png"
+image = Image.open(image_directory)
+
+PAGE_CONFIG = {"page_title":"Необязан", 
+               "page_icon":image, 
+               "layout":"centered", 
+               "initial_sidebar_state":"auto"}
+
+st.set_page_config(**PAGE_CONFIG)
 
 #os.chdir(r"C:\Users\asm\Desktop\То да сё\! НеОбязан")  #папка с проектом
 
