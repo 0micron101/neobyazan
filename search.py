@@ -6,16 +6,17 @@ import webbrowser as wb
 #Вместо кнопок ссылки
 from PIL import Image
 
-image_directory = "1296 logo2.png"
-image = Image.open(image_directory)
+icon = Image.open("1296 logo2.png")
+banner=Image.open("spravka1296banner.png")
 
 PAGE_CONFIG = {"page_title":"Проект (Справка (The Sprawkah project))", 
-               "page_icon":image, 
+               "page_icon":icon, 
                "layout":"centered", 
                "initial_sidebar_state":"auto"}
 
 st.set_page_config(**PAGE_CONFIG)
 
+st.image(banner)
 #os.chdir(r"C:\Users\asm\Desktop\То да сё\! НеОбязан")  #папка с проектом
 
 with open(r"json/alltags.json",'r') as fl:
