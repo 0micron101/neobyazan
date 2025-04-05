@@ -24,7 +24,7 @@ with open(r"json/alltags.json",'r') as fl:
 
 
 
-namesrch=st.text_input("Поиск по имени",placeholder="Пусто")  
+namesrch=st.text_input("Поиск по названию документов",placeholder="Пусто")  
 tagsrch=st.multiselect("Поиск по меткам",alltags,placeholder="Пусто")
 
 
