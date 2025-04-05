@@ -19,7 +19,7 @@ st.set_page_config(**PAGE_CONFIG)
 st.image(banner)
 #os.chdir(r"C:\Users\asm\Desktop\То да сё\! НеОбязан")  #папка с проектом
 
-with open(r"json/alltags.json",'r') as fl:
+with open(r"json/alltags.json",'r',encoding='utf-8) as fl:
     alltags=json.load(fl)["tags"]
 
 
