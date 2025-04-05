@@ -29,7 +29,7 @@ tagsrch=st.multiselect("Поиск по меткам",alltags,placeholder="Пу�
 
 
 for i in os.listdir("json"):
-   with open(fr"json/{i}","r",encoding="uft-8") as fl:
+   with open(fr"json/{i}","r",encoding="cp1251") as fl:
        current=json.load(fl)
        if (namesrch.lower() in current["name"].lower() or namesrch=='') and (set(tagsrch) <= set(current["tags"]) or tagsrch==[]) and (current["name"]!="alltags"):
            #st.write(current["name"])
