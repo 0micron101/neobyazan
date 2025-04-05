@@ -19,7 +19,7 @@ st.set_page_config(**PAGE_CONFIG)
 st.image(banner)
 #os.chdir(r"C:\Users\asm\Desktop\То да сё\! НеОбязан")  #папка с проектом
 
-with open(r"json/alltags.json",'r',encoding="cp1251") as fl:
+with open(r"json/alltags.json",'r') as fl:
     alltags=json.load(fl)["tags"]
 
 
@@ -29,7 +29,7 @@ tagsrch=st.multiselect("Поиск по меткам",alltags,placeholder="Пу�
 
 
 for i in os.listdir("json"):
-   with open(fr"json/{i}","r",encoding="cp1251") as fl:
+   with open(fr"json/{i}","r",encoding="utf-8") as fl:
        current=json.load(fl)
        if (namesrch.lower() in current["name"].lower() or namesrch=='') and (set(tagsrch) <= set(current["tags"]) or tagsrch==[]) and (current["name"]!="alltags"):
            #st.write(current["name"])
