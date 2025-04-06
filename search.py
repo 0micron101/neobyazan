@@ -26,12 +26,12 @@ with open(r"json/alltags.json",'r') as fl:
 
 namesrch=st.text_input("Поиск по названию документов",placeholder="Пусто")  
 tagsrch=st.multiselect("Поиск по меткам",alltags,placeholder="Пусто")
-
+extagsrch=st.multiselect("Исключить метки из поиска",alltags,placeholder="Пусто")
 
 for i in os.listdir("json"):
    with open(fr"json/{i}","r",encoding="utf-8") as fl:
        current=json.load(fl)
-       if (namesrch.lower() in current["name"].lower() or namesrch=='') and (set(tagsrch) <= set(current["tags"]) or tagsrch==[]) and (current["name"]!="alltags"):
+       if (namesrch.lower() in current["name"].lower() or namesrch=='') and (set(tagsrch) <= set(current["tags"]) or tagsrch==[]) and (current["name"]!="alltags") and not(set(extagsrch) in set(current['tags'])):
            #st.write(current["name"])
             if current["origurl"]=='':
                st.write(current["name"])
