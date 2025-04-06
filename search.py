@@ -36,8 +36,10 @@ for i in os.listdir("json"):
          
        elif namesrch.lower()=='игорь грачев':
          st.markdown('Грач*ё*в')
+         break
        elif namesrch.lower() in ['игорь грачёв','игорь грачев','crazygrach']:
          st.markdown(f'[Вот](%s) проект Игорька он (наверно) старался'% 'https://crazygrach.github.io/gamma/')
+         break
 
              
        elif (namesrch.lower() in current["name"].lower() or namesrch=='') and (set(tagsrch) <= set(current["tags"]) or tagsrch==[]) and (not(set(extagsrch) <= set(current['tags'])) or extagsrch==[]):
