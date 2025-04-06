@@ -42,7 +42,7 @@ for i in os.listdir("json"):
          break
 
              
-       elif (namesrch.lower() in current["name"].lower() or namesrch=='') and (set(tagsrch) <= set(current["tags"]) or tagsrch==[]) and (not(set(extagsrch) <= set(current['tags'])) or extagsrch==[]):
+       elif (namesrch.lower() in current["name"].lower() or namesrch=='') and (set(tagsrch) <= set(current["tags"]) or tagsrch==[]) and (not(set(extagsrch) <= set(current['tags'])) or extagsrch==[]) and current["name"]!='alltags':
            #st.write(current["name"])
             if current["origurl"]=='':
                st.write(current["name"])
