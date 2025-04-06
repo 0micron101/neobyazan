@@ -33,7 +33,9 @@ for i in os.listdir("json"):
        current=json.load(fl)
        if current["name"]=="alltags":
            st.write(current)
-
+         
+       elif namesrch.lower()=='игорь грачев':
+         st.markdown('Грач*ё*в')
        elif namesrch.lower() in ['игорь грачёв','игорь грачев','crazygrach']:
          st.markdown(f'[Вот](%s) проект Игорька он (наверно) старался'% 'https://crazygrach.github.io/gamma/')
 
