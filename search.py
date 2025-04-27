@@ -9,7 +9,7 @@ from PIL import Image
 icon = Image.open("1296 logo2.png")
 banner=Image.open("spravka1296banner.png")
 
-PAGE_CONFIG = {"page_title":"Проект (Справка (The Sprawkah project))", 
+PAGE_CONFIG = {"page_title":"Проект Spravka1296", 
                "page_icon":icon, 
                "layout":"centered", 
                "initial_sidebar_state":"auto"}
