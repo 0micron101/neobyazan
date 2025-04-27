@@ -30,7 +30,7 @@ extagsrch=st.multiselect("Исключить метки из поиска",allta
 
 for i in os.listdir("json"):
    with open(fr"json/{i}","r",encoding="utf-8") as fl:
-       current=json.loads(fl)
+       current=json.load(fl)
        if namesrch=="alltags":
            st.write(current)
          
